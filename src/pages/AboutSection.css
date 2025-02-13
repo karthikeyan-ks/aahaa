@@ -8,7 +8,9 @@
     justify-content: flex-start;
     position: relative;
   }
-  
+  .bg-primary {
+    background-color: #09747A !important;
+  }
   .logo-section {
     width: 100%;
     flex: 1;
@@ -25,20 +27,36 @@
   
   .whoarewe-section {
     position: absolute;
-    bottom: -150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     left: 50%;
     transform: translateX(-50%);
     width: 300px;
     z-index: 2;
   }
-  
   .whoarewe-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 60%; /* Default for large screens */
+    min-width: 100px; /* Ensures visibility on small screens */
+    max-width: 300px; /* Prevents it from growing too large */
+    aspect-ratio: 1 / 1; /* Keeps it a perfect square */
+    object-fit: fill; /* Ensures proper fitting */
   }
+  
+  /* Adjust width based on screen size */
+  @media (max-width: 768px) { /* Tablets and smaller */
+    .whoarewe-image {
+      width: 50%;
+    }
+  }
+  
+  @media (max-width: 480px) { /* Mobile */
+    .whoarewe-image {
+      width: 25%;
+    }
+  }
+  
   
   .whoarewe-section-paragraph p {
     font-family: 'Roboto Condensed', sans-serif;
