@@ -6,7 +6,6 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import logo from '../assets/logo.png';
@@ -24,56 +23,54 @@ function Header() {
   };
 
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: '#09747A', top: 0 }}>
-      <Container maxWidth="xl">
-        <Toolbar sx={{ justifyContent: 'center', color: '#D1D5DB' }}>
+    <AppBar position="relative" sx={{ backgroundColor: '#09747A', top: 0 }}>
+      <Toolbar sx={{ justifyContent: 'center', color: '#D1D5DB' }}>
         <Box sx={{ display: 'flex', alignItems: 'center', mr: 2 }}>
-            <img src={logo} alt="Logo" style={{ height: 40 }} />
-          </Box>
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end' }}>
-            <IconButton
-              size="large"
-              aria-label="menu"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-              keepMounted
-              transformOrigin={{ vertical: 'top', horizontal: 'right' }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 3 }}>
+          <img src={logo} alt="Logo" style={{ height: 100 }} />
+        </Box>
+        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end' }}>
+          <IconButton
+            size="large"
+            aria-label="menu"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            onClick={handleOpenNavMenu}
+            color="inherit"
+          >
+            <MenuIcon />
+          </IconButton>
+          <Menu
+            id="menu-appbar"
+            anchorEl={anchorElNav}
+            anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+            keepMounted
+            transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+            open={Boolean(anchorElNav)}
+            onClose={handleCloseNavMenu}
+          >
             {pages.map((page) => (
-              <Button
-                key={page}
-                sx={{
-                  color: 'white',
-                  fontSize: '16px',
-                  textTransform: 'capitalize',
-                  '&:hover': { backgroundColor: 'rgba(255, 255, 255, 0.1)' },
-                }}
-              >
-                {page}
-              </Button>
+              <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <Typography textAlign="center">{page}</Typography>
+              </MenuItem>
             ))}
-          </Box>
-        </Toolbar>
-      </Container>
+          </Menu>
+        </Box>
+        <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 5 }}>
+          {pages.map((page) => (
+            <Button
+              key={page}
+              sx={{
+                color: 'white',
+                fontSize: '16px',
+                textTransform: 'capitalize',
+                '&:hover': { backgroundColor: 'rgba(255, 255, 255, 0.1)' },
+              }}
+            >
+              {page}
+            </Button>
+          ))}
+        </Box>
+      </Toolbar>
     </AppBar>
   );
 }
