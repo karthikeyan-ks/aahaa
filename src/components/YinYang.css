@@ -1,0 +1,47 @@
+.yin-yang {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .half {
+    flex: 1;
+    width: 100%;
+    position: relative;
+  }
+  
+  .black {
+    background-color: black;
+    border-top-left-radius: 75px;
+    border-top-right-radius: 75px;
+  }
+  
+  .white {
+    background-color: white;
+    border-bottom-left-radius: 75px;
+    border-bottom-right-radius: 75px;
+  }
+  
+  .dot {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .white-dot {
+    background-color: white;
+    top: 25%;
+  }
+  
+  .black-dot {
+    background-color: black;
+    bottom: 25%;
+  }
+  

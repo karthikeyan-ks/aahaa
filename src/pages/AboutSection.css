@@ -1,5 +1,5 @@
 .about-section {
-    width: 100vw;
+    width: 95vw;
     height: 50vh;
     background-color: #09747A;
     display: flex;
@@ -8,11 +8,9 @@
     justify-content: flex-start;
     position: relative;
   }
-  .bg-primary {
-    background-color: #09747A !important;
-  }
+  
   .logo-section {
-    width: 100%;
+    width: 60%;
     flex: 1;
     display: flex;
     align-items: center;
@@ -20,28 +18,20 @@
   }
   
   .logo-image {
-    width: 80%;
+    width: 70%;
     height: auto;
     object-fit: contain;
   }
-  
-  .whoarewe-section {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-    z-index: 2;
+  .whoarewe-section{
+    background-color: #09747A;
+    max-width: 90%;
+    color: white;
   }
   .whoarewe-image {
-    width: 60%; /* Default for large screens */
-    min-width: 100px; /* Ensures visibility on small screens */
-    max-width: 300px; /* Prevents it from growing too large */
-    aspect-ratio: 1 / 1; /* Keeps it a perfect square */
-    object-fit: fill; /* Ensures proper fitting */
+    width: 100%;
+    min-width: 100px;
+    aspect-ratio: 1 / 1;
+    object-fit: fill;
   }
   
   /* Adjust width based on screen size */
@@ -58,15 +48,15 @@
   }
   
   
-  .whoarewe-section-paragraph p {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 20px;
-    line-height: 130%;
-    margin-top: 40%;
-    text-align: left;
-    font-weight: 500;
-    padding: 0 20px;
+  .whoarewe-section-paragraph {
+    font-size: .9 rem;
+    color: black;
   }
+
+  .fw-bold {
+    font-weight: bold;
+  }
+
   .wieght-increase{
     font-weight: 700;
   }
