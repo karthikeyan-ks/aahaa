@@ -1,47 +1,54 @@
-.yin-yang {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .half {
-    flex: 1;
-    width: 100%;
-    position: relative;
-  }
-  
-  .black {
-    background-color: black;
-    border-top-left-radius: 75px;
-    border-top-right-radius: 75px;
-  }
-  
-  .white {
-    background-color: white;
-    border-bottom-left-radius: 75px;
-    border-bottom-right-radius: 75px;
-  }
-  
-  .dot {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .white-dot {
-    background-color: white;
-    top: 25%;
-  }
-  
-  .black-dot {
-    background-color: black;
-    bottom: 25%;
-  }
-  
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.message-box {
+  max-width: 150px;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  font-size: 1rem;
+  position: relative;
+  margin: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+/* Left-aligned message */
+.message-box.left {
+  background-color: #09747A;
+  align-self: flex-start;
+}
+
+.message-box.left::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: 0px;
+  width: 30px;
+  height: 65px;
+  background-color: #09747A;
+  border-radius: 10px;
+}
+
+/* Right-aligned message */
+.message-box.right {
+  background-color: #0A527A;
+  align-self: flex-end;
+  right: -35px;
+  top: -50px;
+}
+
+.message-box.right::after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: 0px;
+  width: 30px;
+  height: 65px;
+  background-color: #0A527A;
+  border-radius: 10px;
+}

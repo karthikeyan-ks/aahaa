@@ -3,11 +3,12 @@ import './AboutSection.css';
 import Header from '../components/header';
 import WhoWeAre from '../assets/WhoWeAre.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import YinYang from '../components/yingyang';
 
 
 const AboutSection = () => {
   return (
-    <div className='container-fluid d-flex flex-column justify-content-center align-items-center gap-2'>
+    <div className='container-fluid d-flex flex-column justify-content-center align-items-center gap-5'>
       <section className="d-flex flex-column align-items-center justify-content-start position-relativew-100 w-md-75" style={{ height: "50vh", backgroundColor: "#09747A" }}>
         <Header />
         <div className='logo-section'>
@@ -41,8 +42,8 @@ const AboutSection = () => {
           </div>
         </div>
       </section>
-      <section className='container w-100 d-flex flex-column flex-md-row gap-1 section3 justify-content-center align-items-center'>
-        <div className='d-flex flex-column justify-content-center align-items-center ' style={{ backgroundColor: "#09747A" }}>
+      <section className='container w-100 d-flex flex-column flex-md-row gap-1 section3 justify-content-center align-items-center' style={{ border: "2px solid #09747A", padding: "4px" }}>
+        <div className='d-flex flex-column justify-content-center align-items-center' style={{ backgroundColor: "#09747A", height: "100%", padding: 0, margin: 0 }}>
           <span style={{ fontSize: "5rem", fontWeight: 800, color: "white", margin: 0, padding: 0, lineHeight: "1" }}>
             OUR
           </span>
@@ -59,11 +60,15 @@ const AboutSection = () => {
                 style={{ aspectRatio: "1 / 1", backgroundColor: "#09747A" }}>
               </div>
             ))}
-            
+
           </div>
         </div>
+      </section>
 
-
+      <section className='d-flex flex-column gap-6 flex-md-row m-10'>
+        <YinYang  />
+        <YinYang />
+        <YinYang />
       </section>
     </div>
 

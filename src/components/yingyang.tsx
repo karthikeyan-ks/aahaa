@@ -1,16 +1,16 @@
 import "./YinYang.css";
 
 const YinYang = () => {
-  return (
-    <div className="yin-yang">
-      <div className="half black">
-        <div className="dot white-dot"></div>
-      </div>
-      <div className="half white">
-        <div className="dot black-dot"></div>
-      </div>
-    </div>
-  );
+    return (
+        <div className="chat-container">
+            <div className="message-box left">
+                <p>Hello, this is a message!</p>
+            </div>
+            <div className="message-box right">
+                <p>Hey, I see your message!</p>
+            </div>
+        </div>
+    );
 };
 
 export default YinYang;
