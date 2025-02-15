@@ -8,14 +8,14 @@ import YinYang from '../components/yingyang';
 
 const AboutSection = () => {
   return (
-    <div className='container-fluid d-flex flex-column justify-content-center align-items-center gap-5'>
+    <div className='container-fluid d-flex flex-column justify-content-center align-items-center gap-3'>
       <section className="d-flex flex-column align-items-center justify-content-start position-relativew-100 w-md-75" style={{ height: "50vh", backgroundColor: "#09747A" }}>
         <Header />
         <div className='logo-section'>
           <img src={Logobig} alt="Logo" className='logo-image' />
         </div>
       </section>
-      <section className="container whoarewe-section bg-white w-100 w-md-75 h-100">
+      <section className="container whoarewe-section bg-white w-100 w-md-75 h-auto " style={{ marginTop: "50px" }}>
         <div className="row d-flex flex-column flex-md-row align-items-center">
           <div className="col-12 col-md-6 text-center">
             <img src={WhoWeAre} alt="Who We Are" className="img-fluid whoarewe-image" />
@@ -64,11 +64,39 @@ const AboutSection = () => {
           </div>
         </div>
       </section>
+      <section className='d-flex flex-column gap-6 flex-md-row m-10 w-100 justify-content-evenly'>
+        <YinYang />
+        <YinYang />
+        <YinYang />
+      </section>
+      <section className='d-flex flex-column flex-md-row gap-3 w-100' style={{ backgroundColor: "#09747A" }}>
+        <div className='col-12 col-md-5 '>
+          <h3 style={{ backgroundColor: "white", borderRadius: "10px", padding: "10px", margin: "10px" }}>Digital Marketing Advertising</h3>
+          <p style={{ padding: "5px", margin: "5px", color: "white" }}>
+            Stories have always been at the heart of human connection. In today’s fast-paced digital world, this timeless tradition evolves through engaging, content-driven storytelling. At
+            <span className="fw-bold"> AAHAA ENTERTAINMENTS,</span> we blend emotional narratives with modern media to create captivating content.<br />
+            From social media to video production and influencer marketing, we craft stories that resonate deeply, bridging the gap between brands and their audiences. No matter how media changes, the human desire for meaningful stories remains, and we are here to tell them in the most engaging ways.
+          </p>
+        </div>
+        <div className='col-11 col-md-3 ratio-1x1' style={{ backgroundColor: "gray", margin: "10px", aspectRatio: "1/1" }}>
+        </div>
+        <div className='col-11 col-md-3 ratio-1x1' style={{ backgroundColor: "gray", margin: "10px", aspectRatio: "1/1" }}>
+        </div>
+      </section>
+      <section className='col-11 d-flex flex-columns'>
+        <div className="container d-flex justify-content-center">
+          <div className="ratio ratio-16x9 w-100" style={{ maxWidth: "800px" }}>
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="YouTube video player"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+        <div>
+          
+        </div>
 
-      <section className='d-flex flex-column gap-6 flex-md-row m-10'>
-        <YinYang  />
-        <YinYang />
-        <YinYang />
       </section>
     </div>
 

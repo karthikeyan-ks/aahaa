@@ -1,54 +1,61 @@
-.chat-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-}
+    .chat-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
 
-.message-box {
-  max-width: 150px;
-  padding: 10px;
-  color: white;
-  border-radius: 10px;
-  font-size: 1rem;
-  position: relative;
-  margin: 20px;
-  margin-left: 30px;
-  margin-right: 30px;
-}
+    }
 
-/* Left-aligned message */
-.message-box.left {
-  background-color: #09747A;
-  align-self: flex-start;
-}
+    .message-box {
+    padding: 5px;
+    color: white;
+    border-radius: 10px;
+    font-size: 1rem;
+    position: relative;
+    margin: 1px;
+    }
 
-.message-box.left::after {
-  content: "";
-  position: absolute;
-  bottom: -50px;
-  left: 0px;
-  width: 30px;
-  height: 65px;
-  background-color: #09747A;
-  border-radius: 10px;
-}
+    /* Left-aligned message */
+    .message-box.left {
+    background-color: #09747a;
+    align-self: flex-start;
+    left: 10%;
+    }
 
-/* Right-aligned message */
-.message-box.right {
-  background-color: #0A527A;
-  align-self: flex-end;
-  right: -35px;
-  top: -50px;
-}
+    .message-box.left::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: 0px;
+    width: 30px;
+    height: 65px;
+    background-color: #09747a;
+    border-radius: 10px;
+    }
 
-.message-box.right::after {
-  content: "";
-  position: absolute;
-  top: -50px;
-  right: 0px;
-  width: 30px;
-  height: 65px;
-  background-color: #0A527A;
-  border-radius: 10px;
-}
+    /* Right-aligned message */
+    .message-box.right {
+    background-color: #0a527a;
+    align-self: flex-end;
+    top: 0%;
+    right: 7%;
+    }
+
+    .message-box.right::after {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: 0px;
+    width: 30px;
+    height: 65px;
+    background-color: #0a527a;
+    border-radius: 10px;
+    }
+
+    @media (max-width: 480px) {
+    /* Mobile */
+    .message-box.left {
+        left: 10px;
+    }
+    }
