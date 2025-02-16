@@ -43,7 +43,7 @@ const AboutSection = () => {
         </div>
       </section>
       <section className='col-12 h-auto d-flex flex-column flex-md-row gap-1 section3 justify-content-center align-items-center' style={{ border: "2px solid #09747A", padding: "4px" }}>
-        <div className=' col-12 col-md-3 h-100 d-flex flex-column justify-content-center align-items-center' style={{ backgroundColor: "#09747A", height: "100%", padding: 0, margin: 0 }}>
+        <div className=' col-12 col-md-3 h-auto d-flex flex-column justify-content-center align-items-center' style={{ backgroundColor: "#09747A", height: "100%", padding: 0, margin: 0 }}>
           <span style={{ fontSize: "5rem", fontWeight: 800, color: "white", margin: 0, padding: 0, lineHeight: "1" }}>
             OUR
           </span>
@@ -75,10 +75,8 @@ const AboutSection = () => {
             From social media to video production and influencer marketing, we craft stories that resonate deeply, bridging the gap between brands and their audiences. No matter how media changes, the human desire for meaningful stories remains, and we are here to tell them in the most engaging ways.
           </p>
         </div>
-        <div className='col-11 col-md-3 ratio-1x1' style={{ backgroundColor: "gray", margin: "10px", aspectRatio: "1/1" }}>
-        </div>
-        <div className='col-11 col-md-3 ratio-1x1' style={{ backgroundColor: "gray", margin: "10px", aspectRatio: "1/1" }}>
-        </div>
+        <div className='col-11 col-md-3 ratio-1x1' style={{ backgroundColor: "gray", margin: "10px", aspectRatio: "1/1" }}></div>
+        <div className='col-11 col-md-3 ratio-1x1' style={{ backgroundColor: "gray", margin: "10px", aspectRatio: "1/1" }}></div>
       </section>
       <section className='col-11 d-flex flex-columns'>
         <div className="container d-flex justify-content-center">
