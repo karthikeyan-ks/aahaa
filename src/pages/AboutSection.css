@@ -1,3 +1,4 @@
+
 .about-section {
     width: 100vw;
     height: 50vh;
@@ -7,6 +8,7 @@
     align-items: center;
     justify-content: flex-start;
     position: relative;
+    
   }
   
   .logo-section {
@@ -44,11 +46,20 @@
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 20px;
     line-height: 130%;
-    margin-top: 40%;
+    margin-top: 50%;
     text-align: left;
     font-weight: 500;
     padding: 0 20px;
   }
   .wieght-increase{
     font-weight: 700;
+  }
+  .whoarewe-section-paragraph1 p {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    line-height: 130%;
+    margin-top: 10%;
+    text-align: left;
+    font-weight: 500;
+    padding: 0 20px;
   }

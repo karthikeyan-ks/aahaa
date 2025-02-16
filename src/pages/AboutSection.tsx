@@ -4,10 +4,11 @@ import './AboutSection.css';
 import Header from '../compounent/header';
 import WhoWeAre from '../assets/WhoWeAre.png';
 import WhyAAhAA from '../assets/whyAAha.png';
+import Clientele from '../compounent/Clientele';
 import ClientServices from '../compounent/ClientServices';
 const AboutSection = () => {
   return (
-    <div>
+    <div className='main2'>
       <section className='about-section'>
         <Header />
         <div className='logo-section'>
@@ -23,10 +24,12 @@ const AboutSection = () => {
       <div className='Whyahha-section'>
           <img src={WhyAAhAA} alt="Who We Are" className='whoarewe-image' />
         </div>
-        <div className='whoarewe-section-paragraph'>
+        <div className='whoarewe-section-paragraph1'>
         <p>With over a decade of experience in the South Indian film industry and advertising, our team brings a wealth of creative expertise to every project. We have a strong network of skilled technicians and professionals who are passionate about delivering top-quality content. By collaborating with AAHAA ENTERTAINMENTS, you're partnering with a team that understands the art and craft of storytelling, ensuring your brand’s message leaves a lasting impact. So, why not AAHAA? :</p>
         </div>
+        <Clientele />
         <ClientServices />
+        
     </div>
   );
 };export default AboutSection;
