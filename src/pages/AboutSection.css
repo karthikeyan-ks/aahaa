@@ -8,18 +8,22 @@
     justify-content: flex-start;
     position: relative;
   }
+  .top{
+    height: 65vh;
+    background-color: #09747A;
+  }
   
   .logo-section {
     width: 60%;
     flex: 1;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
   }
   
   .logo-image {
-    width: 50%;
-    height: auto;
+    width: auto;
+    height: 50vh;
     object-fit: contain;
   }
   .whoarewe-section{
@@ -30,28 +34,80 @@
     color: white;
   }
   .whoarewe-image1 {
-    width: 100%;
-    height: 40%;
-    min-width: 80px;
-    object-fit: fill;
-  }
+    width: 30%;
+    height: auto;
+    min-height: 120%; /* Keeps it stretched */
+    min-width: 180px;
+    object-fit: cover;
+    position: relative;
+    transform: translateY(-10%); /* Moves it up smoothly */
+}
+
   .whoarewe-image2 {
-    width: 100%;
-    height: 40%;
-    min-width: 80px;
-    object-fit: fill;
+    width: 30%;
+    height: auto;
+    min-height: 120%; /* Keeps it stretched */
+    min-width: 180px;
+    object-fit: cover;
+    position: relative;
+    transform: translateY(20%); /* Moves it up smoothly */
   }
   .section3{
     margin:20;
-    max-height:300px;
+    max-height:100vh;
   }
   .section3div{
     max-height: 100vh;
+  }
+  .square{
+    max-width:70px;
+  }
+  .upperSection{
+    position: relative;
+    top: -15%;
+  }
+  .ourclient{
+    background-color: #09747A;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    min-height: 150px;
+   
+  }
+  .bar{
+    background-color: #09747A;
+    height: 55px;
   }
   /* Adjust width based on screen size */
   @media (max-width: 768px) { /* Tablets and smaller */
     .whoarewe-image {
       width: 50%;
+    }
+    .whoarewe-image1{
+      width: 90%;
+      transform: translateY(0);
+    }
+    .whoarewe-image2{
+      transform: translateY(0);
+    }
+    .ourclient{
+      height: fit-content;
+      min-height: 0px;
+      flex-direction: row;
+    }
+    .bar{
+      height: 0px;
+    }
+    .top{
+      height: auto;
+    }
+  }
+  @media (max-width: 960px) { /* Tablets and smaller */
+    .whoarewe-image {
+      width: 50%;
+    }
+    .whoarewe-image1{
+      top: 0;
     }
   }
   
@@ -60,6 +116,7 @@
       width: 100%;
       padding: 5px;
     }
+    
     .section3{
       height: auto;
       max-height: fit-content;
@@ -73,9 +130,10 @@
   
   
   .whoarewe-section-paragraph {
-    font-size: .9 rem;
+    font-size: 1.1rem;
     color: black;
     padding: 10px;
+    margin: 10px;
     border: 2px solid #09747A;
   }
 

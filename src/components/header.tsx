@@ -19,7 +19,7 @@ function Header() {
   };
 
   const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
+    setAnchorElNav(null); 
   };
 
   return (
