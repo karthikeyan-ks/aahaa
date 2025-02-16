@@ -8,17 +8,17 @@ import YinYang from '../components/yingyang';
 
 const AboutSection = () => {
   return (
-    <div className='container-fluid d-flex flex-column justify-content-center align-items-center gap-3'>
-      <section className="d-flex flex-column align-items-center justify-content-start position-relativew-100 w-md-75" style={{ height: "50vh", backgroundColor: "#09747A" }}>
+    <div className='container-fluid d-flex flex-column justify-content-center align-items-center gap-2'>
+      <section className="d-flex flex-column align-items-center justify-content-start position-relativew-100 col-12" style={{ height: "50vh", backgroundColor: "#09747A" }}>
         <Header />
         <div className='logo-section'>
           <img src={Logobig} alt="Logo" className='logo-image' />
         </div>
       </section>
-      <section className="container whoarewe-section bg-white w-100 w-md-75 h-auto " style={{ marginTop: "50px" }}>
-        <div className="row d-flex flex-column flex-md-row align-items-center">
+      <section className="whoarewe-section bg-white col-12 w-md-75 h-auto ">
+        <div className="row d-flex flex-column flex-md-row align-items-end " style={{margin:"10px"}}>
           <div className="col-12 col-md-6 text-center">
-            <img src={WhoWeAre} alt="Who We Are" className="img-fluid whoarewe-image" />
+            <img src={WhoWeAre} alt="Who We Are" className="img-fluid whoarewe-image1" />
           </div>
           <div className="col-12 col-md-6">
             <p className="whoarewe-section-paragraph">
@@ -29,9 +29,9 @@ const AboutSection = () => {
           </div>
         </div>
 
-        <div className="row d-flex flex-column-reverse flex-md-row-reverse align-items-center flex-row-reverse">
-          <div className="col-12 col-md-6 text-center">
-            <img src={WhoWeAre} alt="Who We Are" className="img-fluid whoarewe-image" />
+        <div className="row d-flex flex-column-reverse flex-md-row-reverse align-items-start flex-row-reverse">
+          <div className="col-12 col-md-6 ">
+            <img src={WhoWeAre} alt="Who We Are" className="img-fluid whoarewe-image2" />
           </div>
           <div className="col-12 col-md-6">
             <p className="whoarewe-section-paragraph">
@@ -42,8 +42,8 @@ const AboutSection = () => {
           </div>
         </div>
       </section>
-      <section className='container w-100 d-flex flex-column flex-md-row gap-1 section3 justify-content-center align-items-center' style={{ border: "2px solid #09747A", padding: "4px" }}>
-        <div className='d-flex flex-column justify-content-center align-items-center' style={{ backgroundColor: "#09747A", height: "100%", padding: 0, margin: 0 }}>
+      <section className='col-12 h-auto d-flex flex-column flex-md-row gap-1 section3 justify-content-center align-items-center' style={{ border: "2px solid #09747A", padding: "4px" }}>
+        <div className=' col-12 col-md-3 h-100 d-flex flex-column justify-content-center align-items-center' style={{ backgroundColor: "#09747A", height: "100%", padding: 0, margin: 0 }}>
           <span style={{ fontSize: "5rem", fontWeight: 800, color: "white", margin: 0, padding: 0, lineHeight: "1" }}>
             OUR
           </span>
@@ -51,17 +51,14 @@ const AboutSection = () => {
             CLIENTELE
           </h1>
         </div>
-        <div className='d-flex flex-row flex-md-column w-75 w-md-25 gap-2 justify-content-center align-items-center'  >
-          <div className="row d-flex flex-md-row w-100  flex-column gap-1  align-items-center section3div">
-            {Array.from({ length: 14 }).map((_, index) => (
-              <div
-                key={index}
-                className="col-6 col-md-1"
-                style={{ aspectRatio: "1 / 1", backgroundColor: "#09747A" }}>
-              </div>
-            ))}
-
-          </div>
+        <div className="col-12 col-md-8 d-flex flex-md-row w-75 flex-column flex-wrap gap-1 align-items-center section3div">
+          {Array.from({ length: 14 }).map((_, index) => (
+            <div
+              key={index}
+              className="col-6 col-md-1"
+              style={{ aspectRatio: "1 / 1", backgroundColor: "#09747A" }}>
+            </div>
+          ))}
         </div>
       </section>
       <section className='d-flex flex-column gap-6 flex-md-row m-10 w-100 justify-content-evenly'>
@@ -94,7 +91,7 @@ const AboutSection = () => {
           </div>
         </div>
         <div>
-          
+
         </div>
 
       </section>
