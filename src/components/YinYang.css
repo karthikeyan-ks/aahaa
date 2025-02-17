@@ -1,61 +1,51 @@
-    .chat-container {
+.yinyang {
+    width: 100%;
+    height: 250px;
     display: flex;
-    flex-direction: column;
-    gap: 2px;
+    justify-content: center;
     align-items: center;
     justify-content: center;
-
-    }
-
-    .message-box {
-    padding: 5px;
-    color: white;
-    border-radius: 10px;
-    font-size: 1rem;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    left: -6%;
     position: relative;
-    margin: 1px;
-    }
-
-    /* Left-aligned message */
-    .message-box.left {
+    border-radius: 15px; /* Add border-radius for the wrapper */
+    overflow: hidden; /* Ensures content doesn't overflow beyond the border-radius */
+  }
+  h5{
+    color: white;
+  }
+  
+  .yin {
+    position: relative;
+    width: 50%;
+    height: 150px;
+    bottom: -12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    left: 0%;
     background-color: #09747a;
-    align-self: flex-start;
-    left: 10%;
-    }
-
-    .message-box.left::after {
-    content: "";
-    position: absolute;
-    bottom: -50px;
-    left: 0px;
-    width: 30px;
-    height: 65px;
+    clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 75%, 100% 75%, 100% 0%);
+    border-radius: 15px; /* Add border-radius to yin */
+    overflow: hidden; /* Hide overflow to apply border-radius properly */
+  }
+  
+  .yang {
+    position: relative;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    top: -12%;
+    right: -13%;
     background-color: #09747a;
-    border-radius: 10px;
-    }
-
-    /* Right-aligned message */
-    .message-box.right {
-    background-color: #0a527a;
-    align-self: flex-end;
-    top: 0%;
-    right: 7%;
-    }
-
-    .message-box.right::after {
-    content: "";
-    position: absolute;
-    top: -50px;
-    right: 0px;
-    width: 30px;
-    height: 65px;
-    background-color: #0a527a;
-    border-radius: 10px;
-    }
-
-    @media (max-width: 480px) {
-    /* Mobile */
-    .message-box.left {
-        left: 10px;
-    }
-    }
+    clip-path: polygon(0% 100%, 0% 25%, 75% 25%, 75% 0%, 100% 0%, 100% 100%);
+    border-radius: 15px; /* Add border-radius to yang */
+    overflow: hidden; /* Hide overflow to apply border-radius properly */
+  }
+  

@@ -84,7 +84,7 @@ const AboutSection = () => {
 
 
       </section>
-      <section className='d-flex flex-column gap-6 flex-md-row m-10 w-100 justify-content-evenly'>
+      <section className='d-flex flex-column gap-6 flex-md-row m-10 w-100 justify-content-evenly '>
         <YinYang />
         <YinYang />
         <YinYang />
