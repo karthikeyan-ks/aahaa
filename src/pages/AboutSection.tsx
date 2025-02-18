@@ -3,7 +3,9 @@ import './AboutSection.css';
 import Header from '../components/header';
 import WhoWeAre from '../assets/0.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import YinYang from '../components/yingyang';
+import  Modal  from '../components/modal';
 
 
 const AboutSection = () => {
@@ -46,10 +48,10 @@ const AboutSection = () => {
         </div>
         <div className='col-12 bar' ></div>
       </section>
-      <section className='col-12 h-auto d-flex flex-column  flex-sm-column flex-md-row gap-1 section3 justify-content-center align-items-center' style={{ padding: "10px" }}>
+      <section className='col-12 h-auto d-flex flex-column  flex-sm-column flex-md-row gap-1 section3 justify-content-center align-items-center' style={{ border:"1px solid #09747a" }}>
         <div className=' col-12 col-md-3  d-flex flex-row flex-md-column justify-content-center align-items-center ourclient' >
           <span style={{ fontSize: "2rem", fontWeight: 800, color: "white", margin: 10, padding: 0, lineHeight: "1" }}>
-            OUR 
+            OUR
           </span>
           <h1 style={{ margin: 0, padding: 0, lineHeight: "1", color: "white" }}>
             CLIENTELE
@@ -76,7 +78,7 @@ const AboutSection = () => {
               key={index}
               src={logo}
               alt={`logo-${index}`}
-              className="col-2 col-sm-2 col-md-1 square rounded-circle"
+              className="col-2 col-sm-2 col-md-1 square rounded-circle m-2"
               style={{ aspectRatio: "1 / 1", objectFit: "contain" }}
             />
           ))}
@@ -84,26 +86,16 @@ const AboutSection = () => {
 
 
       </section>
-      <section className='d-flex flex-column gap-6 flex-md-row m-10 w-100 justify-content-evenly '>
-        <YinYang />
-        <YinYang />
-        <YinYang />
+      <section className='d-flex flex-column gap-6 flex-md-row m-10 w-100 justify-content-evenly align-items-center'>
+        <YinYang upper="Digital Video Advertising" lower="Corporate Movies" />
+        <YinYang upper="Social Media" lower="Influencer Marketing" />
+        <YinYang upper="Content Creation" lower="Product Shooting" />
       </section>
-      <section className='d-flex flex-column flex-md-row gap-3 w-100' style={{ backgroundColor: "#09747A" }}>
-        <div className='col-12 col-md-5 '>
-          <h3 style={{ backgroundColor: "white", borderRadius: "10px", padding: "10px", margin: "10px" }}>Digital Marketing Advertising</h3>
-          <p style={{ padding: "5px", margin: "5px", color: "white" }}>
-            Stories have always been at the heart of human connection. In today’s fast-paced digital world, this timeless tradition evolves through engaging, content-driven storytelling. At
-            <span className="fw-bold"> AAHAA ENTERTAINMENTS,</span> we blend emotional narratives with modern media to create captivating content.<br />
-            From social media to video production and influencer marketing, we craft stories that resonate deeply, bridging the gap between brands and their audiences. No matter how media changes, the human desire for meaningful stories remains, and we are here to tell them in the most engaging ways.
-          </p>
-        </div>
-        <div className='col-11 col-md-3 ratio-1x1' style={{ backgroundColor: "gray", margin: "10px", aspectRatio: "1/1" }}></div>
-        <div className='col-11 col-md-3 ratio-1x1' style={{ backgroundColor: "gray", margin: "10px", aspectRatio: "1/1" }}></div>
-      </section>
-      <section className='col-11 d-flex flex-columns'>
+      <Modal/>
+      
+      <section className='col-12 d-flex flex-column'>
         <div className="container d-flex justify-content-center">
-          <div className="ratio ratio-16x9 w-100" style={{ maxWidth: "800px" }}>
+          <div className="ratio ratio-16x9 w-100" style={{ maxWidth: "60%" }}>
             <iframe
               src="https://www.youtube.com/embed/dQw4w9WgXcQ"
               title="YouTube video player"
@@ -111,10 +103,11 @@ const AboutSection = () => {
             ></iframe>
           </div>
         </div>
-        <div>
-
+        <div className='col-12 h-75 d-flex flex-row'>
+          <div className='h-75 w-100' style={{backgroundColor:"#888", margin:"5px"}}></div>
+          <div className='h-75 w-100' style={{backgroundColor:"#888", margin:"5px"}}></div>
+          <div className='h-75 w-100' style={{backgroundColor:"#888", margin:"5px"}}></div>
         </div>
-
       </section>
     </div>
 

@@ -16,27 +16,29 @@
   h5{
     color: white;
   }
-  
   .yin {
     position: relative;
     width: 50%;
     height: 150px;
     bottom: -12%;
     display: flex;
+    text-align: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     left: 0%;
     background-color: #09747a;
     clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 75%, 100% 75%, 100% 0%);
-    border-radius: 15px; /* Add border-radius to yin */
-    overflow: hidden; /* Hide overflow to apply border-radius properly */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 1px 12px 12px rgba(0, 0, 0, 0.95); /* Adds shadow with 4px offset and 12px blur */
   }
   
   .yang {
     position: relative;
     width: 50%;
     display: flex;
+    text-align: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -45,7 +47,8 @@
     right: -13%;
     background-color: #09747a;
     clip-path: polygon(0% 100%, 0% 25%, 75% 25%, 75% 0%, 100% 0%, 100% 100%);
-    border-radius: 15px; /* Add border-radius to yang */
-    overflow: hidden; /* Hide overflow to apply border-radius properly */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: -4px 4px 12px rgba(0, 0, 0, 0.75); /* Adds shadow with -4px offset and 12px blur */
   }
   

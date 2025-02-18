@@ -68,7 +68,7 @@
   }
   .ourclient{
     background-color: #09747A;
-    height: auto;
+    height: 100%;
     padding: 10px;
     margin: 10px;
     min-height: 150px;
@@ -101,6 +101,9 @@
     .top{
       height: auto;
     }
+    .ourclient{
+      height: auto;
+    }
   }
   @media (max-width: 960px) { /* Tablets and smaller */
     .whoarewe-image {
@@ -124,6 +127,9 @@
     .section3div{
       height: auto;
       max-height: auto;
+    }
+    .ourclient{
+      height: auto;
     }
 
   }
