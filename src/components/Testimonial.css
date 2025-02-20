@@ -1,0 +1,72 @@
+.testimonial-box {
+    position: relative;
+    max-width: 400px;
+    background: #206d75;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.quote-icon {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    background: #1c5b62;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.testimonier-name {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.designation {
+    font-size: 16px;
+    color: #c7e4e7;
+}
+
+.testimonial-text {
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+.stars {
+    margin-top: 10px;
+}
+
+.star {
+    color: gold;
+    font-size: 20px;
+    margin: 0 2px;
+}
+
+.star.inactive {
+    color: gray;
+}
+
+.profile-image {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid black;
+    overflow: hidden;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
