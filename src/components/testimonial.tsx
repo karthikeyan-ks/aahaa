@@ -4,7 +4,7 @@ const Testimonial = () => {
   return (
     <div className="testimonial-box">
       {/* Quote Icon */}
-      <div className="quote-icon">“”</div>
+      <div className="quote-icon">“</div>
 
       {/* Name & Designation */}
       <h2 className="testimonier-name">NAME OF TESTIMONIER</h2>
