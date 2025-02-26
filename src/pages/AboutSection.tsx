@@ -2,6 +2,7 @@ import Logobig from '../assets/Logobig.png';
 import './AboutSection.css';
 import Header from '../components/header';
 import WhoWeAre from '../assets/0.png';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import YinYang from '../components/yingyang';
@@ -11,17 +12,25 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import Testimonial from '../components/testimonial';
 import ImageGrid from '../components/ImageGrid';
-import Whyaahaa from '../assets/image copy 2.png'
-import paulyjr from '../assets/pauly jr.jpg'
+import lulu from '../assets/lulu-group-fb.avif'
+import rajasthanMarbles from '../assets/rajasthan-marbles.jpeg'
 import disney from '../assets/disneyhotstar_660_110320034428.webp'
 import berger from '../assets/berger.webp'
 import esc from '../assets/logo esc.png'
-import afc from '../assets/AFC-Logo-1.svg'
-import aj from '../assets/aj.png'
+import WhyAahaa from '../assets/whyaahaa (2).png';
 import whiteman from '../assets/whiteman.jpg'
-import siddarthm from '../assets/siddharthm_logo-02.jpg'
 import trend from '../assets/images.jpg'
 import swaDiamonds from '../assets/swadiamonds.jpeg'
+import image0 from '../assets/pexels-cottonbro-2773521.jpg'
+import image1 from '../assets/pexels-cottonbro-2773538.jpg'
+import image2 from '../assets/pexels-cottonbro-3296547.jpg'
+import image3 from '../assets/pexels-diimejii-3314294.jpg'
+import image4 from '../assets/pexels-liza-summer-6347919.jpg'
+import image5 from '../assets/pexels-mart-production-7330128.jpg'
+import image6 from '../assets/pexels-mizunokozuki-13929360.jpg'
+import image7 from '../assets/pexels-nappy-3602934.jpg'
+import image8 from '../assets/pexels-onorblog-17319947.jpg'
+import { Link } from "react-scroll";
 
 const dictionary = {
   "Digital Video Advertising": "Captivate your audience with dynamic video ads that tell your brand’s story. We craft visually stunning content that cuts through the noise and drives results. Let’s turn your vision into a digital masterpiece.",
@@ -35,13 +44,13 @@ const dictionary = {
 type DictionaryKey = keyof typeof dictionary;
 
 const AboutSection = () => {
-  const handleButton = (name: string) => {
-
+  const handleButton = (name: string,i: number) => {
+    setButtonIndex(i)
     setIndex(name as DictionaryKey)
   }
 
-
   const [index, setIndex] = useState<DictionaryKey>("Digital Video Advertising");
+  const [buttonIndex , setButtonIndex] = useState<number>(1)
   const [isModalView, setIsModalView] = useState(window.innerWidth > 768);
 
   // Function to update view mode
@@ -88,7 +97,7 @@ const AboutSection = () => {
 
       </div>
       <div className='d-flex w-auto flex-row justify-content-center align-item-center mt-4 mb-4' >
-        <ImageGrid />
+        <ImageGrid  index={buttonIndex}/>
       </div>
 
     </section>
@@ -96,30 +105,27 @@ const AboutSection = () => {
 
 
   const images = [
-    "https://picsum.photos/id/1015/400/200",
-    "https://picsum.photos/id/1016/400/200",
-    "https://picsum.photos/id/1018/400/200",
-    "https://picsum.photos/id/1020/400/200",
-    "https://picsum.photos/id/1025/400/200",
-    "https://picsum.photos/id/1030/400/200"
+    image0, image1, image2, image3, image4, image5, image6, image7, image8
   ];
   return (
     <div className='col-12'>
       <div className='container-fluid w-100 d-flex flex-column justify-content-center align-items-center gap-2 h-auto'>
-        <section className="d-flex flex-column align-items-center justify-content-start position-relative col-12 top" >
+        <section id='home' className="d-flex flex-column align-items-center justify-content-start position-relative col-12 top" >
           <Header />
           <div className='logo-section'>
             <img src={Logobig} alt="Logo" className='image-fluid col-md-7 col-12' />
           </div>
         </section>
-        <section className="whoarewe-section bg-white col-12 w-md-75 ">
-          <div className="d-flex flex-column flex-md-row h-auto justify-content-evenly align-items-end ">
-            <img src={WhoWeAre} alt="Who We Are" className="image-fluid whoarewe-image1 col-md-5 col-12" />
-            <div className="">
-              <p className="whoarewe-section-paragraph ">
-                Stories have always been at the heart of human connection. In today’s fast-paced digital world, this timeless tradition evolves through engaging, content-driven storytelling. At
-                <span className="fw-bold"> AAHAA ENTERTAINMENTS,</span> we blend emotional narratives with modern media to create captivating content.<br />
-                From social media to video production and influencer marketing, we craft stories that resonate deeply, bridging the gap between brands and their audiences. No matter how media changes, the human desire for meaningful stories remains, and we are here to tell them in the most engaging ways.
+        <section id='about' className="whoarewe-section bg-white col-12 w-md-75 ">
+          <div className="d-flex flex-column flex-md-row h-auto justify-content-evenly align-items-stretch">
+            {/* Image Container */}
+            <div className="d-flex col-12 col-md-4">
+              <img src={WhoWeAre} alt="Who We Are" className=" whoarewe-image1 " />
+            </div>
+
+            {/* Text Container */}
+            <div className="col-12 col-md-7 d-flex align-items-center">
+              <p className="whoarewe-section-paragraph">
                 Stories have always been at the heart of human connection. In today’s fast-paced digital world, this timeless tradition evolves through engaging, content-driven storytelling. At
                 <span className="fw-bold"> AAHAA ENTERTAINMENTS,</span> we blend emotional narratives with modern media to create captivating content.<br />
                 From social media to video production and influencer marketing, we craft stories that resonate deeply, bridging the gap between brands and their audiences. No matter how media changes, the human desire for meaningful stories remains, and we are here to tell them in the most engaging ways.
@@ -127,14 +133,15 @@ const AboutSection = () => {
             </div>
           </div>
 
+          <div className="d-flex flex-column-reverse flex-md-row-reverse h-auto justify-content-evenly align-items-stretch">
+            {/* Image Container */}
+            <div className="d-flex col-12 col-md-4">
+              <img src={WhyAahaa} alt="Who Aahaa" className=" whoarewe-image2 " />
+            </div>
 
-          <div className="d-flex flex-column flex-md-row-reverse justify-content-evenly align-items-start ">
-            <img src={Whyaahaa} alt="Who We Are" className="whoarewe-image2 col-md-5 col-12  image-fluid" />
-            <div className="">
+            {/* Text Container */}
+            <div className="col-12 col-md-7 d-flex align-items-center">
               <p className="whoarewe-section-paragraph">
-                Stories have always been at the heart of human connection. In today’s fast-paced digital world, this timeless tradition evolves through engaging, content-driven storytelling. At
-                <span className="fw-bold"> AAHAA ENTERTAINMENTS,</span> we blend emotional narratives with modern media to create captivating content.<br />
-                From social media to video production and influencer marketing, we craft stories that resonate deeply, bridging the gap between brands and their audiences. No matter how media changes, the human desire for meaningful stories remains, and we are here to tell them in the most engaging ways.
                 Stories have always been at the heart of human connection. In today’s fast-paced digital world, this timeless tradition evolves through engaging, content-driven storytelling. At
                 <span className="fw-bold"> AAHAA ENTERTAINMENTS,</span> we blend emotional narratives with modern media to create captivating content.<br />
                 From social media to video production and influencer marketing, we craft stories that resonate deeply, bridging the gap between brands and their audiences. No matter how media changes, the human desire for meaningful stories remains, and we are here to tell them in the most engaging ways.
@@ -155,50 +162,41 @@ const AboutSection = () => {
           <div className="col-12 col-sm-12 w-75 col-md-8 d-flex flex-md-row flex-column  flex-wrap align-items-center section3div gap-1 gap-md-4">
             {[
               [
-                { "name": "Pauly Jr", "logo": paulyjr },
-                { "name": "Disney Hotstar", "logo": disney }
+                { "name": "Swa Diamonds", "logo": swaDiamonds },
+                { "name": "Trends", "logo": trend },
               ],
               [
                 { "name": "Berger", "logo": berger },
-                { "name": "Eurpoe Study Center", "logo": esc }
+                { "name": "Disney Hotstar", "logo": disney }
               ],
               [
-                { "name": "A F C", "logo": afc },
-                { "name": "A J", "logo": aj }
+                { "name": "Eurpoe Study Center", "logo": esc },
+                { "name": "Lulu", "logo": lulu }
               ],
               [
+                { "name": "Rajasthan Marbles", "logo": rajasthanMarbles },
                 { "name": "Whiteman", "logo": whiteman },
-                { "name": "siddarth Menon", "logo": siddarthm }
-              ],
-              [
-                { "name": "Trends", "logo": trend },
-                { "name": "Swa Diamonds", "logo": swaDiamonds }
               ],
             ].map((logo, index) => (
               <div className='d-flex flex-row flex-md-column h-auto ml-5 pair justify-content-center' >
                 <div className='ml-3 d-flex w-100 flex-column justify-content-center align-items-center'>
-                  <a href={logo[0].name === "Swa Diamonds" ? "https://www.instagram.com/reel/DF7iYF0Mykp/?igsh=bHE2YXFmcGg5ajdo" : ""} target="_blank" rel="noopener noreferrer">
-                    <img
-                      key={index}
-                      src={logo[0].logo}
-                      alt={`logo-${index}`}
-                      className="col-12 col-sm-12 col-md-1 square rounded-circle "
-                      style={{ aspectRatio: "1 / 1", objectFit: "contain" }}
-                    />
-                  </a>
+                  <img
+                    key={index}
+                    src={logo[0].logo}
+                    alt={`logo-${index}`}
+                    className="col-12 col-sm-12 col-md-1 square rounded-circle "
+                    style={{ aspectRatio: "1 / 1", objectFit: "contain" }}
+                  />
                   <p className='text-center w-100'>{logo[0].name}</p>
                 </div>
                 <div className='ml-3 w-100 d-flex flex-column justify-content-center align-items-center'>
-                <a href={logo[1].name === "Swa Diamonds" ? "https://www.instagram.com/reel/DF7iYF0Mykp/?igsh=bHE2YXFmcGg5ajdo" : "#"} target="_blank" rel="noopener noreferrer">
-                    <img
-                      key={index}
-                      
-                      src={logo[1].logo}
-                      alt={`logo-${index}`}
-                      className="col-12 col-sm-12 col-md-1 square rounded-circle "
-                      style={{ aspectRatio: "1 / 1", objectFit: "contain" }}
-                    />
-                  </a>
+                  <img
+                    key={index}
+                    src={logo[1].logo}
+                    alt={`logo-${index}`}
+                    className="col-12 col-sm-12 col-md-1 square rounded-circle "
+                    style={{ aspectRatio: "1 / 1", objectFit: "contain" }}
+                  />
                   <p className='w-100 text-center'> {logo[1].name}</p>
                 </div>
 
@@ -275,12 +273,13 @@ const AboutSection = () => {
       <div className='col-12 footer d-flex flex-row justify-content-between'>
         <div className='col-5 d-flex flex-column justify-content-center align-items-start'>
           <h3 className='w-100 text-start' style={{ color: "white" }}>INFORMATIONS</h3>
-          <div className='col-12 d-flex flex-column justify-content-center align-items-start'>
-            <p className='para' style={{ textTransform: "capitalize" }}>home</p>
-            <p className='para' style={{ textTransform: "capitalize" }}>about</p>
-            <p className='para' style={{ textTransform: "capitalize" }}>blog</p>
-            <p className='para' style={{ textTransform: "capitalize" }}>services</p>
-          </div>
+          <nav className='col-12 d-flex flex-column justify-content-center align-items-start'>
+            <Link to="home" smooth={true} duration={500} className="para">Home</Link>
+            <Link to="about" smooth={true} duration={500} className="para">About</Link>
+            <Link to="blog" smooth={true} duration={500} className="para">Blog</Link>
+            <Link to="services" smooth={true} duration={500} className="para">Services</Link>
+          </nav>
+
         </div>
 
         <div className='col-5 d-flex flex-column justify-content-center align-items-end'>
@@ -291,8 +290,13 @@ const AboutSection = () => {
             <p className='para' style={{ textTransform: "capitalize" }}>Social Media</p>
             <p className='para' style={{ textTransform: "capitalize" }}>Content Creation</p>
           </div>
-
         </div>
+
+      </div>
+      <div className='col-12 d-flex flex-column justify-content-center align-items-center' style={{ color: "white", backgroundColor: "#09747a" }}>
+        <div> &copy; aahaa entertainments</div>
+        <div>  all right reserved</div>
+        <br />
       </div>
 
     </div>

@@ -1,22 +1,27 @@
-import './whoweare.css'
-const WhoWeAre = () => {
-    return (
-      <div className="relative flex items-center justify-center h-[300px] w-[500px] bg-white shadow-lg rounded-lg p-5">
-        {/* Background Shadow */}
-        <div className="absolute top-3 left-3 w-full h-full bg-teal-700 rounded-lg -z-10"></div>
-        
-        {/* Question Mark */}
-        <div className="absolute left-0 -top-10 text-teal-700 text-[200px] font-bold leading-none">
-          ?
-        </div>
-  
-        {/* Text Content */}
-        <div className="text-teal-700 text-5xl font-bold text-right">
-          WHO <br /> WE <br /> ARE
-        </div>
+import React from "react";
+import "./whoweare.css"; // Make sure this file exists
+
+interface WhyAahaaProps {
+  upper: string;
+  medium: string;
+  lower: string;
+  condition?: boolean; // Optional condition prop
+}
+
+const WhyAahaa: React.FC<WhyAahaaProps> = ({ upper, medium, lower, condition }) => {
+  return (
+    <div className={`why-aahaa-container ${condition ? 'bottom' : ''}`}>
+      <div className="why-box">
+        <h1 className="why-text">{upper}</h1>
+        <h1 className="aahaa-text">{medium}</h1>
+        <h2 className="entertainment-text">{lower}</h2>
       </div>
-    );
-  };
-  
-  export default WhoWeAre;
-  
+      <div className="question-mark-container">
+        <div className="question-mark question-mark-bg">?</div>
+        <div className="question-mark question-mark-top">?</div>
+      </div>
+    </div>
+  );
+};
+
+export default WhyAahaa;

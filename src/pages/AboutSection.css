@@ -36,30 +36,29 @@ body {
 }
 .whoarewe-section {
   background-color: #09747a;
-  max-width: 99%;
+  max-width: 100%;
   padding: 0;
   margin: 0;
   color: white;
 }
 .whoarewe-image1 {
-  width: 30%;
+  width: 100%;
   height: auto;
   min-height: 120%;
   min-width: 180px;
-  object-fit: cover;
+  object-fit: fill;
   position: relative;
   transform: translateY(-10%);
 }
 
 .whoarewe-image2 {
-  width: 30%;
+  width: 100%;
   height: auto;
   min-height: 120%;
   min-width: 180px;
-  object-fit: cover;
-  position: relative;
-  transform: translateY(10%);
-  
+  object-fit: fill;
+  position: relative;  
+  transform: translateY(-5%);
 }
 .section3 {
   margin: 20;
@@ -122,6 +121,10 @@ body {
   padding: 0;
   margin: 0;
 }
+.overflow-x-hidden {
+  overflow-x: hidden !important;
+}
+
 .footer {
   overflow: hidden;
   width: 100%;
@@ -137,6 +140,8 @@ body {
 }
 .para {
   width: 100%;
+  text-decoration: none;
+  margin: 5px;
   color: #dfdfdf;
 }
 .inner {
@@ -172,6 +177,7 @@ body {
   }
   .whoarewe-image2 {
     transform: translateY(0);
+    margin-bottom: 20px;
   }
   .ourclient {
     height: fit-content;
@@ -205,6 +211,9 @@ body {
   .section3div {
     justify-content: center;
   }
+  .whoarewe-section-paragraph{
+    font-size: 0.9rem !important;
+  }
 
   .whoarewe-image {
     width: 100%;
@@ -228,7 +237,8 @@ body {
 }
 
 .whoarewe-section-paragraph {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  line-height: 2;
   color: black;
   padding: 10px;
   border: 2px solid #09747a;

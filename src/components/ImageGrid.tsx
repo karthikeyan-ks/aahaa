@@ -1,68 +1,42 @@
-const images = [
-    "https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg",
-    "https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg",
-    "https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg",
-    "https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg",
-    "https://images.pexels.com/photos/6483589/pexels-photo-6483589.jpeg",
-    "https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg",
-  ];
-  
-  export default function ImageGrid() {
-    return (
-      <div style={containerStyle}>
-        <div style={gridStyle}>
-          {images.map((src, index) => (
-            <div
-              key={index}
-              style={{
-                ...getGridSpan(index),
-                ...imageContainerStyle,
-              }}
-            >
-              <img src={src} alt={`img-${index}`} style={imageStyle} />
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  }
-  
-  const containerStyle: React.CSSProperties = {
-    display: "flex",
-    justifyContent: "center", // Center horizontally
-    alignItems: "center", // Center vertically
-    height: "100%", // Full viewport height
-  };
-  
-  
-  const gridStyle: React.CSSProperties = {
-    display: "grid",
-    gridTemplateColumns: "repeat(3, 100px)",
-    gridTemplateRows: "repeat(3, 100px)",
-    gap: "10px",
-    width: "330px",
-    gridAutoFlow: "dense",
-  };
-  
-  const imageContainerStyle: React.CSSProperties = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    overflow: "hidden",
-  };
-  
-  const imageStyle: React.CSSProperties = {
-    width: "100%",
-    height: "100%",
-    objectFit: "cover",
-    transition: "all 0.5s ease",
-  };
-  
-  // Function to handle grid span logic
-  const getGridSpan = (index: number): React.CSSProperties => {
-    if (index === 0) {
-      return { gridColumn: "span 2", gridRow: "span 2" }; // First image 2x larger
-    }
-    return { gridColumn: "span 1", gridRow: "span 1" }; // Others stay the same
-  };
-  
+const videos = [
+  "https://drive.google.com/file/d/1dRp8NfHYdZkfEs81Adq884cF5vVUcy1-/preview",
+  "https://www.instagram.com/reel/DF7iYF0Mykp/embed",
+  "https://www.instagram.com/reel/C06jWhCvB7K/embed",
+  "https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg",
+  "https://images.pexels.com/photos/6483589/pexels-photo-6483589.jpeg",
+  "https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg",
+];
+interface ImageGridProps {
+  index: number; // Making it optional since it's not being used
+}
+
+export default function ImageGrid({ index }: ImageGridProps) {
+  return (
+    <div style={containerStyle}>
+      <iframe
+        style={iframeStyle}
+        src={videos[index-1]} // Replace with your video URL
+        title="Video Player"
+        allow="autoplay; encrypted-media"
+        allowFullScreen
+      ></iframe>
+    </div>
+  );
+}
+
+
+const containerStyle: React.CSSProperties = {
+  display: "flex",
+  justifyContent: "center", // Center horizontally
+  alignItems: "center", // Center vertically
+  height: "100%", // Full viewport height
+};
+
+const iframeStyle: React.CSSProperties = {
+  width: "40vw", // 80% of viewport width
+  height: "45vw", // Maintain 16:9 aspect ratio
+  maxWidth: "40vw", // Limit max width
+  maxHeight: "450px", // Limit max height
+  margin: "20px",
+  border: "none",
+};

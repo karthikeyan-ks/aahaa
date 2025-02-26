@@ -12,7 +12,7 @@ import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Button from '@mui/material/Button';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookIcon from '@mui/icons-material/Facebook';
+import { ContactPhone } from '@mui/icons-material';
 import EmailIcon from '@mui/icons-material/Email';
 import logo from '../assets/logo.png';
 
@@ -23,9 +23,12 @@ const pages = [
   { name: 'SERVICES', to: 'services' }
 ];
 
+//mail  aahaaentertainments @gmail.com
+//contact  7907723382
+//insta https://www.instagram.com/aahaa_entertainments?igsh=MXd3ejR4emNlcXR2aA==
+
 function Header() {
   const [drawerOpen, setDrawerOpen] = useState(false);
-
   const toggleDrawer =
     (open: boolean) =>
       (event: React.MouseEvent | React.KeyboardEvent | {}) => {
@@ -100,15 +103,15 @@ function Header() {
 
           {/* Social Media Icons in Drawer */}
           <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, mt: 2 }}>
-            <IconButton sx={{ color: 'white', fontSize: '70px' }} href="https://www.instagram.com" target="_blank">
+            <IconButton sx={{ color: 'white', fontSize: '70px' }} href="https://www.instagram.com/aahaa_entertainments?igsh=MXd3ejR4emNlcXR2aA==" target="_blank">
               <InstagramIcon sx={{ fontSize: '40px' }} />
             </IconButton>
 
-            <IconButton sx={{ color: 'white', fontSize: '70px' }} href="https://www.facebook.com" target="_blank">
-              <FacebookIcon sx={{ fontSize: '40px' }} />
+            <IconButton sx={{ color: 'white', fontSize: '70px' }} href="tel:+917907723382" target="_blank">
+              <ContactPhone sx={{ fontSize: '40px' }} />
             </IconButton>
 
-            <IconButton sx={{ color: 'white', fontSize: '70px' }} href="mailto:example@email.com">
+            <IconButton sx={{ color: 'white', fontSize: '70px' }} href="mailto:aahaaentertainments@gmail.com">
               <EmailIcon sx={{ fontSize: '40px' }} />
             </IconButton>
           </Box>
