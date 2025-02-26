@@ -12,17 +12,29 @@ interface ImageGridProps {
 
 export default function ImageGrid({ index }: ImageGridProps) {
   return (
+    
     <div style={containerStyle}>
-      <iframe
-        style={iframeStyle}
-        src={videos[index-1]} // Replace with your video URL
-        title="Video Player"
-        allow="autoplay; encrypted-media"
-        allowFullScreen
-      ></iframe>
+      {index <= 3 ? (
+        <iframe
+          style={iframeStyle}
+          src={videos[index - 1]} // Use the correct video URL
+          title="Video Player"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+        ></iframe>
+      ) : (
+        <img src={videos[index - 1]} alt="Displayed Image" className="image-fluid" style={imageStyle} />
+      )}
     </div>
   );
 }
+
+const imageStyle: React.CSSProperties = {
+  width: "500px",
+  height: "300px",
+  objectFit: "fill",
+  margin:"10px"
+};
 
 
 const containerStyle: React.CSSProperties = {
